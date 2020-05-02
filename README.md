@@ -4,9 +4,9 @@ Convert web pages into RSS feed.
 
 https://rss-converter.wktk.jp/
 
-## Example
+## Examples
 
-### 渋谷区役所
+### 渋谷区役所 (Shibuya City Office)
 
 https://rss-converter.wktk.jp/rss?url=https://www.city.shibuya.tokyo.jp/news/index.html&index_selector=.js-tabTarget.is-current&article_selector=li&link_selector=a&date_selector=.date
 
@@ -18,7 +18,7 @@ https://rss-converter.wktk.jp/rss?url=https://www.city.shibuya.tokyo.jp/news/ind
 | Link Selector | `a` |
 | Date Selector | `.date` |
 
-### 運輸安全委員会
+### 運輸安全委員会 (Japan Transport Safety Board)
 
 https://rss-converter.wktk.jp/rss?url=https%3A%2F%2Fwww.mlit.go.jp%2Fjtsb%2F&index_selector=.news&article_selector=dl&link_selector=a&date_selector=dt
 
