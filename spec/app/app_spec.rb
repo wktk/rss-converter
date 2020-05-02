@@ -1,6 +1,6 @@
 require './spec/spec_helper'
 
-describe App do
+describe RssConverter::App do
   describe "GET /" do
     it "should allow accessing the home page" do
       get '/'
