@@ -1,7 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    backports (3.17.1)
     mini_portile2 (2.4.0)
+    multi_json (1.14.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nokogiri (1.10.9)
@@ -17,6 +19,13 @@ GEM
       mustermann (~> 1.0)
       rack (~> 2.0)
       rack-protection (= 2.0.8.1)
+      tilt (~> 2.0)
+    sinatra-contrib (2.0.8.1)
+      backports (>= 2.8.2)
+      multi_json
+      mustermann (~> 1.0)
+      rack-protection (= 2.0.8.1)
+      sinatra (= 2.0.8.1)
       tilt (~> 2.0)
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
@@ -34,6 +43,7 @@ DEPENDENCIES
   nokogiri (~> 1.10)
   rss (~> 0.2.9)
   sinatra (~> 2.0)
+  sinatra-contrib (~> 2.0)
   slim (~> 4.0)
   wareki (~> 1.1)
 

@@ -1,8 +1,13 @@
 require 'sinatra/base'
+require 'sinatra/reloader'
 require 'slim'
 require './lib/rss_converter.rb'
 
 class App < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
+
   get '/' do
     slim :index
   end
