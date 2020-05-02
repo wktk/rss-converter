@@ -1,7 +1,5 @@
 require './spec/spec_helper'
 
-require './lib/rss_converter'
-
 describe 'RssConverter#rss (real world examples)' do
   subject { RssConverter.new(**args).rss.to_s }
 
