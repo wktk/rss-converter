@@ -1,0 +1,22 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.9)
+      mini_portile2 (~> 2.4.0)
+    rexml (3.2.4)
+    rss (0.2.9)
+      rexml
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  nokogiri (~> 1.10)
+  rss (~> 0.2.9)
+
+RUBY VERSION
+   ruby 2.7.1p83
+
+BUNDLED WITH
+   2.1.4
