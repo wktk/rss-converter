@@ -1,0 +1,22 @@
+name: RSpec
+on: push
+
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: 2.7.1
+
+      - name: Set up dependences
+        run: |
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+
+      - name: Run RSpec
+        run: bundle exec rspec
+        env:
+          TZ: Asia/Tokyo
