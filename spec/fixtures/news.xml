@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <author>
+    <name>rss-converter</name>
+  </author>
+  <id>http://example.com</id>
+  <title>title-hoge</title>
+  <updated>2020-05-02T16:16:45+09:00</updated>
+  <entry>
+    <id>http://example.com/news/2020-07-01-1.html</id>
+    <link href="http://example.com/news/2020-07-01-1.html"/>
+    <title>猛暑日を記録しました</title>
+    <updated>2020-07-01T00:00:00+09:00</updated>
+    <dc:date>2020-07-01T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://example.net/azisai.html</id>
+    <link href="http://example.net/azisai.html"/>
+    <title>あじさいが見頃です</title>
+    <updated>2020-06-21T00:00:00+09:00</updated>
+    <dc:date>2020-06-21T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://example.com/news/2020-04-02-1.html</id>
+    <link href="http://example.com/news/2020-04-02-1.html"/>
+    <title>桜が満開になりました</title>
+    <updated>2020-04-02T00:00:00+09:00</updated>
+    <dc:date>2020-04-02T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://example.com/news/2020-03-09-1.html</id>
+    <link href="http://example.com/news/2020-03-09-1.html"/>
+    <title>春一番を観測しました</title>
+    <updated>2020-03-09T00:00:00+09:00</updated>
+    <dc:date>2020-03-09T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://example.com/news/2019-12-13-1.html</id>
+    <link href="http://example.com/news/2019-12-13-1.html"/>
+    <title>初雪を観測しました</title>
+    <updated>2019-12-13T00:00:00+09:00</updated>
+    <dc:date>2019-12-13T00:00:00+09:00</dc:date>
+  </entry>
+  <dc:date>2020-05-02T16:16:45+09:00</dc:date>
+</feed>

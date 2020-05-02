@@ -12,3 +12,7 @@ gem 'wareki', '~> 1.1'
 group :production do
   gem 'puma', '~> 4.3'
 end
+
+group :test do
+  gem 'rspec', '~> 3.9'
+end
