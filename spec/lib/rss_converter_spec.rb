@@ -9,7 +9,6 @@ describe RssConverter do
     allow(URI).to receive(:open).with('http://example.com') { fixture('news.html') }
   end
 
-
   let(:valid_arguments) { {
     url: 'http://example.com',
     index_selector: 'ul',
