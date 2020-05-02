@@ -40,12 +40,17 @@ class RssConverter
     end
   end
 
+  def title
+    title = html_document.css('title').text
+    title.empty? ? url : title
+  end
+
   def rss
     RSS::Maker.make("atom") do |maker|
       maker.channel.author = "rss-converter"
       maker.channel.updated = Time.now.to_s
       maker.channel.about = url
-      maker.channel.title = url
+      maker.channel.title = title
 
       entries.each do |entry|
         maker.items.new_item do |item|
