@@ -1,0 +1,15 @@
+h1: a href='/' RSS Converter
+
+form action='/rss'
+  dl
+    dt: label for="url" URL
+    dd: input name="url" placeholder="https://example.com/feed.xml"
+    dt: label for="index_selector" Index Selector
+    dd: input name="index_selector" placeholder="#news"
+    dt: label for="article_selector" Article Selector
+    dd: input name="article_selector" placeholder=".news_item"
+    dt: label for="link_selector" Link Selector
+    dd: input name="link_selector" placeholder="a.link"
+    dt: label for="date_selector" Date Selector
+    dd: input name="date_selector" placeholder="span.date"
+  input type="submit"
