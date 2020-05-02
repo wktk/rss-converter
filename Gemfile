@@ -8,3 +8,7 @@ gem 'sinatra', '~> 2.0'
 gem 'sinatra-contrib', '~> 2.0'
 gem 'slim', '~> 4.0'
 gem 'wareki', '~> 1.1'
+
+group :production do
+  gem 'puma', '~> 4.3'
+end
