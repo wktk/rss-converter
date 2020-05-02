@@ -6,3 +6,9 @@ html
     meta name='viewport' content='initial-scale=1.0, width=device-width, user-scalable=yes'
   body
     #content== yield
+
+    footer style="margin: 50px auto"
+      hr
+      a href="https://github.com/wktk/rss-converter" wktk/rss-converter
+      - if ENV['HEROKU_SLUG_COMMIT']
+        span &nbsp;@&nbsp;#{ENV['HEROKU_SLUG_COMMIT'].slice(0, 7)}
