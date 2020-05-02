@@ -13,10 +13,7 @@ class App < Sinatra::Base
   end
 
   get '/rss' do
-    args = params.slice(*%i(url index_selector article_selector link_selector date_selector))
-    converter = RssConverter.new(**args.map { |k, v| [k.to_sym, v] }.to_h)
-
     content_type 'application/atom+xml'
-    converter.rss.to_s
+    RssConverter.from(params).rss.to_s
   end
 end

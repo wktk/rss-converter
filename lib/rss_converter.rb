@@ -4,6 +4,20 @@ require 'rss'
 require 'wareki'
 
 class RssConverter
+  ATTRIBUTES = %i(
+    url
+    index_selector
+    article_selector
+    link_selector
+    date_selector
+  ).freeze
+
+  class << self
+    def from(hash)
+      new(**hash.slice(*ATTRIBUTES).map { |k, v| [k.to_sym, v] }.to_h)
+    end
+  end
+
   def initialize(url:, index_selector:, article_selector:, link_selector:, date_selector:)
     @url = url
     @index_selector = index_selector
@@ -11,7 +25,7 @@ class RssConverter
     @link_selector = link_selector
     @date_selector = date_selector
   end
-  attr_accessor :url, :index_selector, :article_selector, :link_selector, :date_selector
+  attr_accessor(*ATTRIBUTES)
 
   def html_document
     html = URI.open(url).read
