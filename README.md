@@ -2,13 +2,13 @@
 
 Convert web pages into RSS feed.
 
-https://rss-converter.herokuapp.com/
+https://rss-converter.wktk.jp/
 
 ## Example
 
 ### 渋谷区役所
 
-https://rss-converter.herokuapp.com/rss?url=https://www.city.shibuya.tokyo.jp/news/index.html&index_selector=.js-tabTarget.is-current&article_selector=li&link_selector=a&date_selector=.date
+https://rss-converter.wktk.jp/rss?url=https://www.city.shibuya.tokyo.jp/news/index.html&index_selector=.js-tabTarget.is-current&article_selector=li&link_selector=a&date_selector=.date
 
 | param | value |
 |---|---|
@@ -20,7 +20,7 @@ https://rss-converter.herokuapp.com/rss?url=https://www.city.shibuya.tokyo.jp/ne
 
 ### 運輸安全委員会
 
-https://rss-converter.herokuapp.com/rss?url=https%3A%2F%2Fwww.mlit.go.jp%2Fjtsb%2F&index_selector=.news&article_selector=dl&link_selector=a&date_selector=dt
+https://rss-converter.wktk.jp/rss?url=https%3A%2F%2Fwww.mlit.go.jp%2Fjtsb%2F&index_selector=.news&article_selector=dl&link_selector=a&date_selector=dt
 
 | param | value |
 |---|---|
