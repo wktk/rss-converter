@@ -11,10 +11,16 @@ jobs:
         with:
           ruby-version: 2.7.1
 
+      - uses: actions/cache@v1
+        with:
+          path: .bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: ${{ runner.os }}-gems-
+
       - name: Set up dependences
         run: |
           gem install bundler
-          bundle install --jobs 4 --retry 3
+          bundle check || bundle install --jobs 4 --retry 3 --path .bundle
 
       - name: Run RSpec
         run: bundle exec rspec
