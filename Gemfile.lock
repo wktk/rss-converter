@@ -7,6 +7,9 @@ GEM
     rexml (3.2.4)
     rss (0.2.9)
       rexml
+    wareki (1.1.0)
+      ya_kansuji (> 0.0.9, < 2.0.0)
+    ya_kansuji (0.2.0)
 
 PLATFORMS
   ruby
@@ -14,6 +17,7 @@ PLATFORMS
 DEPENDENCIES
   nokogiri (~> 1.10)
   rss (~> 0.2.9)
+  wareki (~> 1.1)
 
 RUBY VERSION
    ruby 2.7.1p83

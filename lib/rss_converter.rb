@@ -1,15 +1,17 @@
 require 'nokogiri'
 require 'open-uri'
 require 'rss'
+require 'wareki'
 
 class RssConverter
-  def initialize(url:, index_selector:, article_selector:, link_selector:)
+  def initialize(url:, index_selector:, article_selector:, link_selector:, date_selector:)
     @url = url
     @index_selector = index_selector
     @article_selector = article_selector
     @link_selector = link_selector
+    @date_selector = date_selector
   end
-  attr_accessor :url, :index_selector, :article_selector, :link_selector
+  attr_accessor :url, :index_selector, :article_selector, :link_selector, :date_selector
 
   def html_document
     html = URI.open(url).read
@@ -24,8 +26,18 @@ class RssConverter
     index.css(article_selector)
   end
 
-  def links
-    articles.map { |article| article.css(link_selector).first }
+  def entries
+    articles.map do |article|
+      link = article.css(link_selector).first
+      href = link['href']
+      href = URI.join(url, href).to_s unless href.start_with?('http')
+
+      {
+        link: href,
+        title: link.text,
+        updated: Date.parse(article.css(date_selector).text),
+      }
+    end
   end
 
   def rss
@@ -35,13 +47,11 @@ class RssConverter
       maker.channel.about = url
       maker.channel.title = url
 
-      links.each do |link|
-        href = link['href']
-        href = URI.join(url, href).to_s unless href.start_with?('http')
+      entries.each do |entry|
         maker.items.new_item do |item|
-          item.link = href
-          item.title = link.text
-          item.updated = Time.now.to_s
+          item.link = entry[:link]
+          item.title = entry[:title]
+          item.updated = entry[:updated].to_s
         end
       end
     end
