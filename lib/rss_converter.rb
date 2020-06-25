@@ -42,7 +42,8 @@ class RssConverter
 
   def entries
     articles.map do |article|
-      link = article.css(link_selector).first
+      link = article.css(link_selector).find { |l| l['href'] && !l['href'].empty? }
+      next unless link
       href = link['href']
       href = URI.join(url, href).to_s unless href.start_with?('http')
 
@@ -51,7 +52,7 @@ class RssConverter
         title: link.text,
         updated: Date.parse(article.css(date_selector).text),
       }
-    end
+    end.compact
   end
 
   def title
