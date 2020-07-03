@@ -50,7 +50,7 @@ class RssConverter
       {
         link: href,
         title: link.text,
-        updated: Date.parse(article.css(date_selector).text),
+        updated: (Date.parse(article.css(date_selector).text) rescue Date.today),
       }
     end.compact
   end
