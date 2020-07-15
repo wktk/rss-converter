@@ -13,7 +13,7 @@ class RssConverter::App < Sinatra::Base
   end
 
   get '/rss' do
-    content_type 'application/atom+xml'
+    content_type 'application/rss+xml'
     RssConverter.from(params).rss.to_s
   end
 end
