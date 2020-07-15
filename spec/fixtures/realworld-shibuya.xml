@@ -1,221 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"
-  xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <author>
-    <name>rss-converter</name>
-  </author>
-  <id>https://www.city.shibuya.tokyo.jp/news/index.html</id>
-  <title>新着情報 | 渋谷区公式サイト</title>
-  <updated>2020-05-02T16:16:16+09:00</updated>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona.html"/>
-    <title>新型コロナウイルス感染症への対応について（令和2年5月2日更新）</title>
-    <updated>2020-05-02T00:00:00+09:00</updated>
-    <dc:date>2020-05-02T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kusei/koho/hodo/message20200502.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kusei/koho/hodo/message20200502.html"/>
-    <title>【区長メッセージ】渋谷区のPCR検査体制につきまして</title>
-    <updated>2020-05-02T00:00:00+09:00</updated>
-    <dc:date>2020-05-02T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kusei/koho/hodo/message20200501.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kusei/koho/hodo/message20200501.html"/>
-    <title>【区長メッセージ】感染症拡大防止のため、5月31日まで区有施設の休館・休業を継続します</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/shogaisha/syougai_dennwasoudann_00001.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/shogaisha/syougai_dennwasoudann_00001.html"/>
-    <title>ゴールデンウイークに障害のある人に関する、電話相談窓口を開設します</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/anzen/bosai/bosai_keikaku/musen/20200509harunoogawa.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/anzen/bosai/bosai_keikaku/musen/20200509harunoogawa.html"/>
-    <title>毎日17時に放送している防災行政無線「夕やけこやけ」を「春の小川」に変更します</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/koreisha/fukushi/daiamond_peace.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/koreisha/fukushi/daiamond_peace.html"/>
-    <title>自宅で簡単に運動不足を解消！「若返るダイヤモンド体操」井上順さんバージョンを公開しました</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kodomo/gakkou/tetsuduki_s.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kodomo/gakkou/tetsuduki_s.html"/>
-    <title>渋谷区奨学資金貸付（特別募集）</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/jutaku/info.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/jutaku/info.html"/>
-    <title>令和2年5月の都営住宅入居者募集の日程変更について</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kusei/saiyo/kaikeinendoninyo/webdesigner.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kusei/saiyo/kaikeinendoninyo/webdesigner.html"/>
-    <title> 会計年度任用職員（ウェブデザイナー）採用選考を実施します</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kotsu/corona_bus.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kotsu/corona_bus.html"/>
-    <title>ハチ公バス（神宮の杜ルート）北参道入口バス停を休止します</title>
-    <updated>2020-05-01T00:00:00+09:00</updated>
-    <dc:date>2020-05-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kokuho_nenkin/kokuho/yuso_tetsuzuki.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kokuho_nenkin/kokuho/yuso_tetsuzuki.html"/>
-    <title>【国民健康保険】郵送などで行える手続きをまとめました</title>
-    <updated>2020-04-28T00:00:00+09:00</updated>
-    <dc:date>2020-04-28T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kodomo/hoiku/kigen_saiencho.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kodomo/hoiku/kigen_saiencho.html"/>
-    <title>保育園等入園時における育児休業等からの復職・復学期限の再延長について</title>
-    <updated>2020-04-27T00:00:00+09:00</updated>
-    <dc:date>2020-04-27T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kusei/saiyo/kaikeinendoninyo/kokuhojimu.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kusei/saiyo/kaikeinendoninyo/kokuhojimu.html"/>
-    <title>会計年度任用職員（事務補助員）採用選考を実施します</title>
-    <updated>2020-04-27T00:00:00+09:00</updated>
-    <dc:date>2020-04-27T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kyufukin/index.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kyufukin/index.html"/>
-    <title>特別定額給付金（仮称）について（令和2年4月24日更新）</title>
-    <updated>2020-04-24T00:00:00+09:00</updated>
-    <dc:date>2020-04-24T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/tetsuduki_index.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/tetsuduki_index.html"/>
-    <title>郵送などで行える手続きについて</title>
-    <updated>2020-04-22T00:00:00+09:00</updated>
-    <dc:date>2020-04-22T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kusei/ku/callcenter_syogai.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kusei/ku/callcenter_syogai.html"/>
-    <title>区役所代表番号の不通について（現在復旧済み）</title>
-    <updated>2020-04-22T00:00:00+09:00</updated>
-    <dc:date>2020-04-22T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/bunka/sportsnavi/detail/radio_stayhome.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/bunka/sportsnavi/detail/radio_stayhome.html"/>
-    <title>おうちで体を動かそう【渋谷のラジオ体操】を公開しました</title>
-    <updated>2020-04-22T00:00:00+09:00</updated>
-    <dc:date>2020-04-22T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kokuho_nenkin/kokuho/yusotetsuduki.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kokuho_nenkin/kokuho/yusotetsuduki.html"/>
-    <title>【国民健康保険】郵送により可能な手続きが増えました（令和2年5月6日まで）</title>
-    <updated>2020-04-22T00:00:00+09:00</updated>
-    <dc:date>2020-04-22T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/jigyosha/proposal/taisin_keikaku_00001.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/jigyosha/proposal/taisin_keikaku_00001.html"/>
-    <title>渋谷区耐震改修促進計画改定業務委託事業者選定のための公募型プロポーザルを実施します</title>
-    <updated>2020-04-22T00:00:00+09:00</updated>
-    <dc:date>2020-04-22T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/jumin/kofu/koufuki_kyushi.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/jumin/kofu/koufuki_kyushi.html"/>
-    <title>住民基本台帳カード・個人番号カードを使用するコンビニエンスストア各種証明書自動交付サービスの休止のお知らせ（休止期間：令和2年5月2日～年5月6日の終日）</title>
-    <updated>2020-04-21T00:00:00+09:00</updated>
-    <dc:date>2020-04-21T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona2020420.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona2020420.html"/>
-    <title>渋谷区コールセンター（総合案内）における新型コロナウイルス感染者の発生について</title>
-    <updated>2020-04-20T00:00:00+09:00</updated>
-    <dc:date>2020-04-20T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.youtube.com/watch?v=i4PCYQSaOEo</id>
-    <link href="https://www.youtube.com/watch?v=i4PCYQSaOEo"/>
-    <title>しぶや動画ギャラリー「令和2年 新成人を祝う会」の動画を公開しました（YouTubeへリンク）</title>
-    <updated>2020-04-20T00:00:00+09:00</updated>
-    <dc:date>2020-04-20T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.youtube.com/watch?v=CqSXk787cMI&amp;t=14s</id>
-    <link href="https://www.youtube.com/watch?v=CqSXk787cMI&amp;t=14s"/>
-    <title>しぶや動画ギャラリー「渋谷イルミネーション2019-2020」の動画を公開しました（YouTubeへリンク）</title>
-    <updated>2020-04-20T00:00:00+09:00</updated>
-    <dc:date>2020-04-20T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kodomo/page_em_00036.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kodomo/page_em_00036.html"/>
-    <title>【渋谷区教育委員会】会計年度任用職員（学校栄養指導員）を募集します</title>
-    <updated>2020-04-20T00:00:00+09:00</updated>
-    <dc:date>2020-04-20T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona0417.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona0417.html"/>
-    <title>区職員における新型コロナウイルス感染症患者発生について（令和2年4月17日付け）</title>
-    <updated>2020-04-17T00:00:00+09:00</updated>
-    <dc:date>2020-04-17T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/jigyosha/syoko_rodo_soudan/yushijosei/corona_shien.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/jigyosha/syoko_rodo_soudan/yushijosei/corona_shien.html"/>
-    <title>新型コロナウイルス感染症に伴う中小企業支援について</title>
-    <updated>2020-04-17T00:00:00+09:00</updated>
-    <dc:date>2020-04-17T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona_eventinfo.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona_eventinfo.html"/>
-    <title>新型コロナウイルス感染症の拡大防止に伴うイベント等の中止・延期について（令和2年4月15日現在）</title>
-    <updated>2020-04-16T00:00:00+09:00</updated>
-    <dc:date>2020-04-16T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/koreisha/fukushi/tokuteishogu_kasan_souto.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/koreisha/fukushi/tokuteishogu_kasan_souto.html"/>
-    <title>令和2年度介護職員（等特定）処遇改善計画書の提出について</title>
-    <updated>2020-04-15T00:00:00+09:00</updated>
-    <dc:date>2020-04-15T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kurashi/stayhome_fooddelivery.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kurashi/stayhome_fooddelivery.html"/>
-    <title>【自宅で楽しむおいしい渋谷】フードデリバリー利用促進キャンペーンを実施します</title>
-    <updated>2020-04-14T00:00:00+09:00</updated>
-    <dc:date>2020-04-14T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>https://www.city.shibuya.tokyo.jp/kodomo/ninshin/soudan/papamama_ikuji.html</id>
-    <link href="https://www.city.shibuya.tokyo.jp/kodomo/ninshin/soudan/papamama_ikuji.html"/>
-    <title>パパ・ママ入門学級、育児学級の実習資料を公開します</title>
-    <updated>2020-04-14T00:00:00+09:00</updated>
-    <dc:date>2020-04-14T00:00:00+09:00</dc:date>
-  </entry>
-  <dc:date>2020-05-02T16:16:16+09:00</dc:date>
-</feed>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>新着情報 | 渋谷区公式サイト</title>
+    <link>https://www.city.shibuya.tokyo.jp/news/index.html</link>
+    <description>新着情報 | 渋谷区公式サイト</description>
+    <pubDate>Sat, 02 May 2020 16:16:16 +0900</pubDate>
+    <item>
+      <title>新型コロナウイルス感染症への対応について（令和2年5月2日更新）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona.html</link>
+    </item>
+    <item>
+      <title>【区長メッセージ】渋谷区のPCR検査体制につきまして</title>
+      <link>https://www.city.shibuya.tokyo.jp/kusei/koho/hodo/message20200502.html</link>
+    </item>
+    <item>
+      <title>【区長メッセージ】感染症拡大防止のため、5月31日まで区有施設の休館・休業を継続します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kusei/koho/hodo/message20200501.html</link>
+    </item>
+    <item>
+      <title>ゴールデンウイークに障害のある人に関する、電話相談窓口を開設します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/shogaisha/syougai_dennwasoudann_00001.html</link>
+    </item>
+    <item>
+      <title>毎日17時に放送している防災行政無線「夕やけこやけ」を「春の小川」に変更します</title>
+      <link>https://www.city.shibuya.tokyo.jp/anzen/bosai/bosai_keikaku/musen/20200509harunoogawa.html</link>
+    </item>
+    <item>
+      <title>自宅で簡単に運動不足を解消！「若返るダイヤモンド体操」井上順さんバージョンを公開しました</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/koreisha/fukushi/daiamond_peace.html</link>
+    </item>
+    <item>
+      <title>渋谷区奨学資金貸付（特別募集）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kodomo/gakkou/tetsuduki_s.html</link>
+    </item>
+    <item>
+      <title>令和2年5月の都営住宅入居者募集の日程変更について</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/jutaku/info.html</link>
+    </item>
+    <item>
+      <title> 会計年度任用職員（ウェブデザイナー）採用選考を実施します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kusei/saiyo/kaikeinendoninyo/webdesigner.html</link>
+    </item>
+    <item>
+      <title>ハチ公バス（神宮の杜ルート）北参道入口バス停を休止します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kotsu/corona_bus.html</link>
+    </item>
+    <item>
+      <title>【国民健康保険】郵送などで行える手続きをまとめました</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kokuho_nenkin/kokuho/yuso_tetsuzuki.html</link>
+    </item>
+    <item>
+      <title>保育園等入園時における育児休業等からの復職・復学期限の再延長について</title>
+      <link>https://www.city.shibuya.tokyo.jp/kodomo/hoiku/kigen_saiencho.html</link>
+    </item>
+    <item>
+      <title>会計年度任用職員（事務補助員）採用選考を実施します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kusei/saiyo/kaikeinendoninyo/kokuhojimu.html</link>
+    </item>
+    <item>
+      <title>特別定額給付金（仮称）について（令和2年4月24日更新）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kyufukin/index.html</link>
+    </item>
+    <item>
+      <title>郵送などで行える手続きについて</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/tetsuduki_index.html</link>
+    </item>
+    <item>
+      <title>区役所代表番号の不通について（現在復旧済み）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kusei/ku/callcenter_syogai.html</link>
+    </item>
+    <item>
+      <title>おうちで体を動かそう【渋谷のラジオ体操】を公開しました</title>
+      <link>https://www.city.shibuya.tokyo.jp/bunka/sportsnavi/detail/radio_stayhome.html</link>
+    </item>
+    <item>
+      <title>【国民健康保険】郵送により可能な手続きが増えました（令和2年5月6日まで）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kokuho_nenkin/kokuho/yusotetsuduki.html</link>
+    </item>
+    <item>
+      <title>渋谷区耐震改修促進計画改定業務委託事業者選定のための公募型プロポーザルを実施します</title>
+      <link>https://www.city.shibuya.tokyo.jp/jigyosha/proposal/taisin_keikaku_00001.html</link>
+    </item>
+    <item>
+      <title>住民基本台帳カード・個人番号カードを使用するコンビニエンスストア各種証明書自動交付サービスの休止のお知らせ（休止期間：令和2年5月2日～年5月6日の終日）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/jumin/kofu/koufuki_kyushi.html</link>
+    </item>
+    <item>
+      <title>渋谷区コールセンター（総合案内）における新型コロナウイルス感染者の発生について</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona2020420.html</link>
+    </item>
+    <item>
+      <title>しぶや動画ギャラリー「令和2年 新成人を祝う会」の動画を公開しました（YouTubeへリンク）</title>
+      <link>https://www.youtube.com/watch?v=i4PCYQSaOEo</link>
+    </item>
+    <item>
+      <title>しぶや動画ギャラリー「渋谷イルミネーション2019-2020」の動画を公開しました（YouTubeへリンク）</title>
+      <link>https://www.youtube.com/watch?v=CqSXk787cMI&amp;t=14s</link>
+    </item>
+    <item>
+      <title>【渋谷区教育委員会】会計年度任用職員（学校栄養指導員）を募集します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kodomo/page_em_00036.html</link>
+    </item>
+    <item>
+      <title>区職員における新型コロナウイルス感染症患者発生について（令和2年4月17日付け）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona0417.html</link>
+    </item>
+    <item>
+      <title>新型コロナウイルス感染症に伴う中小企業支援について</title>
+      <link>https://www.city.shibuya.tokyo.jp/jigyosha/syoko_rodo_soudan/yushijosei/corona_shien.html</link>
+    </item>
+    <item>
+      <title>新型コロナウイルス感染症の拡大防止に伴うイベント等の中止・延期について（令和2年4月15日現在）</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/kenko/kansen/corona_eventinfo.html</link>
+    </item>
+    <item>
+      <title>令和2年度介護職員（等特定）処遇改善計画書の提出について</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/koreisha/fukushi/tokuteishogu_kasan_souto.html</link>
+    </item>
+    <item>
+      <title>【自宅で楽しむおいしい渋谷】フードデリバリー利用促進キャンペーンを実施します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kurashi/stayhome_fooddelivery.html</link>
+    </item>
+    <item>
+      <title>パパ・ママ入門学級、育児学級の実習資料を公開します</title>
+      <link>https://www.city.shibuya.tokyo.jp/kodomo/ninshin/soudan/papamama_ikuji.html</link>
+    </item>
+    <dc:date>2020-05-02T16:16:16+09:00</dc:date>
+  </channel>
+</rss>

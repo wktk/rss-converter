@@ -12,7 +12,6 @@ describe RssConverter do
     index_selector: 'ul',
     article_selector: 'li',
     link_selector: 'a',
-    date_selector: '.date',
   } }
 
   describe '#initialize' do
@@ -53,11 +52,11 @@ describe RssConverter do
   describe '#entries' do
     it 'parses the document' do
       expect(subject.entries).to eq [
-        { link: 'http://example.com/news/2020-07-01-1.html', title: '猛暑日を記録しました', updated: Date.new(2020, 7, 1) },
-        { link: 'http://example.net/azisai.html', title: 'あじさいが見頃です', updated: Date.new(2020, 6, 21) },
-        { link: 'http://example.com/news/2020-04-02-1.html', title: '桜が満開になりました', updated: Date.new(2020, 4, 2) },
-        { link: 'http://example.com/news/2020-03-09-1.html', title: '春一番を観測しました', updated: Date.new(2020, 3, 9) },
-        { link: 'http://example.com/news/2019-12-13-1.html', title: '初雪を観測しました', updated: Date.new(2019, 12, 13) },
+        { link: 'http://example.com/news/2020-07-01-1.html', title: '猛暑日を記録しました' },
+        { link: 'http://example.net/azisai.html', title: 'あじさいが見頃です' },
+        { link: 'http://example.com/news/2020-04-02-1.html', title: '桜が満開になりました' },
+        { link: 'http://example.com/news/2020-03-09-1.html', title: '春一番を観測しました' },
+        { link: 'http://example.com/news/2019-12-13-1.html', title: '初雪を観測しました' },
       ]
     end
   end
@@ -66,7 +65,7 @@ describe RssConverter do
     before { allow(Time).to receive(:now) { '2020-05-02T16:16:45+09:00' } }
 
     it 'generates RSS' do
-      expect(subject.rss).to be_a RSS::Atom::Feed
+      expect(subject.rss).to be_a RSS::Rss
       expect(subject.rss.to_s).to eq fixture('news.xml').read
     end
   end

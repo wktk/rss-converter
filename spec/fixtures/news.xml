@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"
-  xmlns:dc="http://purl.org/dc/elements/1.1/">
-  <author>
-    <name>rss-converter</name>
-  </author>
-  <id>http://example.com</id>
-  <title>title-hoge</title>
-  <updated>2020-05-02T16:16:45+09:00</updated>
-  <entry>
-    <id>http://example.com/news/2020-07-01-1.html</id>
-    <link href="http://example.com/news/2020-07-01-1.html"/>
-    <title>猛暑日を記録しました</title>
-    <updated>2020-07-01T00:00:00+09:00</updated>
-    <dc:date>2020-07-01T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>http://example.net/azisai.html</id>
-    <link href="http://example.net/azisai.html"/>
-    <title>あじさいが見頃です</title>
-    <updated>2020-06-21T00:00:00+09:00</updated>
-    <dc:date>2020-06-21T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>http://example.com/news/2020-04-02-1.html</id>
-    <link href="http://example.com/news/2020-04-02-1.html"/>
-    <title>桜が満開になりました</title>
-    <updated>2020-04-02T00:00:00+09:00</updated>
-    <dc:date>2020-04-02T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>http://example.com/news/2020-03-09-1.html</id>
-    <link href="http://example.com/news/2020-03-09-1.html"/>
-    <title>春一番を観測しました</title>
-    <updated>2020-03-09T00:00:00+09:00</updated>
-    <dc:date>2020-03-09T00:00:00+09:00</dc:date>
-  </entry>
-  <entry>
-    <id>http://example.com/news/2019-12-13-1.html</id>
-    <link href="http://example.com/news/2019-12-13-1.html"/>
-    <title>初雪を観測しました</title>
-    <updated>2019-12-13T00:00:00+09:00</updated>
-    <dc:date>2019-12-13T00:00:00+09:00</dc:date>
-  </entry>
-  <dc:date>2020-05-02T16:16:45+09:00</dc:date>
-</feed>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>title-hoge</title>
+    <link>http://example.com</link>
+    <description>title-hoge</description>
+    <pubDate>Sat, 02 May 2020 16:16:45 +0900</pubDate>
+    <item>
+      <title>猛暑日を記録しました</title>
+      <link>http://example.com/news/2020-07-01-1.html</link>
+    </item>
+    <item>
+      <title>あじさいが見頃です</title>
+      <link>http://example.net/azisai.html</link>
+    </item>
+    <item>
+      <title>桜が満開になりました</title>
+      <link>http://example.com/news/2020-04-02-1.html</link>
+    </item>
+    <item>
+      <title>春一番を観測しました</title>
+      <link>http://example.com/news/2020-03-09-1.html</link>
+    </item>
+    <item>
+      <title>初雪を観測しました</title>
+      <link>http://example.com/news/2019-12-13-1.html</link>
+    </item>
+    <dc:date>2020-05-02T16:16:45+09:00</dc:date>
+  </channel>
+</rss>

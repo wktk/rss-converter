@@ -15,7 +15,6 @@ describe 'RssConverter#rss (real world examples)' do
         index_selector: '.js-tabTarget.is-current',
         article_selector: 'li',
         link_selector: 'a',
-        date_selector: '.date',
       }
     }
     let(:html) { fixture('realworld-shibuya.html') }
@@ -30,7 +29,6 @@ describe 'RssConverter#rss (real world examples)' do
         index_selector: '.news',
         article_selector: 'dl',
         link_selector: 'a',
-        date_selector: 'dt',
       }
     }
     let(:html) { fixture('realworld-mlit-jtsb.html') }
