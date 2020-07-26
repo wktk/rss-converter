@@ -1,42 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
-  <channel>
-    <title>運輸安全委員会</title>
-    <link>https://www.mlit.go.jp/jtsb/</link>
-    <description>運輸安全委員会</description>
-    <pubDate>Sat, 02 May 2020 16:16:16 +0900</pubDate>
-    <item>
-      <title>委員長記者会見資料掲載</title>
-      <link>https://www.mlit.go.jp/jtsb/kaiken/kaiken20200421.html</link>
-    </item>
-    <item>
-      <title>令和2年4月17日に帯広空港滑走路上で発生した独立行政法人航空大学校所属シーラス式SR22型の航空重大インシデント［着陸時に前脚が損傷し、航行が継続できなくなった事態］</title>
-      <link>http://jtsb.mlit.go.jp/jtsb/aircraft/detail2.php?id=2271</link>
-    </item>
-    <item>
-      <title>令和2年4月12日に松山空港の南南西約30km、高度約8,200mで発生したANAウイングス株式会社所属ボーイング式737-800型の航空事故［機体の動揺による客室乗務員の負傷］</title>
-      <link>http://jtsb.mlit.go.jp/jtsb/aircraft/detail2.php?id=2270</link>
-    </item>
-    <item>
-      <title>事故等調査報告書を公表しました</title>
-      <link>https://www.mlit.go.jp/jtsb/#houkokusyo</link>
-    </item>
-    <item>
-      <title>令和2年4月13日付人事異動</title>
-      <link>https://www.mlit.go.jp/jtsb/idou/idou200413.pdf</link>
-    </item>
-    <item>
-      <title>令和2年4月1日付人事異動</title>
-      <link>https://www.mlit.go.jp/jtsb/idou/idou200401.pdf</link>
-    </item>
-    <item>
-      <title>入札情報更新</title>
-      <link>http://www.mlit.go.jp/jtsb/kekka.html</link>
-    </item>
-    <dc:date>2020-05-02T16:16:16+09:00</dc:date>
-  </channel>
-</rss>
+<feed xmlns="http://www.w3.org/2005/Atom"
+  xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <author>
+    <name>rss-converter</name>
+  </author>
+  <id>https://www.mlit.go.jp/jtsb/</id>
+  <title>運輸安全委員会</title>
+  <updated>2020-05-02T16:16:16+09:00</updated>
+  <entry>
+    <id>https://www.mlit.go.jp/jtsb/kaiken/kaiken20200421.html</id>
+    <link href="https://www.mlit.go.jp/jtsb/kaiken/kaiken20200421.html"/>
+    <title>委員長記者会見資料掲載</title>
+    <updated>2020-04-28T00:00:00+09:00</updated>
+    <dc:date>2020-04-28T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://jtsb.mlit.go.jp/jtsb/aircraft/detail2.php?id=2271</id>
+    <link href="http://jtsb.mlit.go.jp/jtsb/aircraft/detail2.php?id=2271"/>
+    <title>令和2年4月17日に帯広空港滑走路上で発生した独立行政法人航空大学校所属シーラス式SR22型の航空重大インシデント［着陸時に前脚が損傷し、航行が継続できなくなった事態］</title>
+    <updated>2020-04-24T00:00:00+09:00</updated>
+    <dc:date>2020-04-24T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://jtsb.mlit.go.jp/jtsb/aircraft/detail2.php?id=2270</id>
+    <link href="http://jtsb.mlit.go.jp/jtsb/aircraft/detail2.php?id=2270"/>
+    <title>令和2年4月12日に松山空港の南南西約30km、高度約8,200mで発生したANAウイングス株式会社所属ボーイング式737-800型の航空事故［機体の動揺による客室乗務員の負傷］</title>
+    <updated>2020-04-24T00:00:00+09:00</updated>
+    <dc:date>2020-04-24T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>https://www.mlit.go.jp/jtsb/#houkokusyo</id>
+    <link href="https://www.mlit.go.jp/jtsb/#houkokusyo"/>
+    <title>事故等調査報告書を公表しました</title>
+    <updated>2020-04-23T00:00:00+09:00</updated>
+    <dc:date>2020-04-23T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>https://www.mlit.go.jp/jtsb/idou/idou200413.pdf</id>
+    <link href="https://www.mlit.go.jp/jtsb/idou/idou200413.pdf"/>
+    <title>令和2年4月13日付人事異動</title>
+    <updated>2020-04-13T00:00:00+09:00</updated>
+    <dc:date>2020-04-13T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>https://www.mlit.go.jp/jtsb/idou/idou200401.pdf</id>
+    <link href="https://www.mlit.go.jp/jtsb/idou/idou200401.pdf"/>
+    <title>令和2年4月1日付人事異動</title>
+    <updated>2020-04-01T00:00:00+09:00</updated>
+    <dc:date>2020-04-01T00:00:00+09:00</dc:date>
+  </entry>
+  <entry>
+    <id>http://www.mlit.go.jp/jtsb/kekka.html</id>
+    <link href="http://www.mlit.go.jp/jtsb/kekka.html"/>
+    <title>入札情報更新</title>
+    <updated>2020-03-23T00:00:00+09:00</updated>
+    <dc:date>2020-03-23T00:00:00+09:00</dc:date>
+  </entry>
+  <dc:date>2020-05-02T16:16:16+09:00</dc:date>
+</feed>

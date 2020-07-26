@@ -9,6 +9,7 @@ class RssConverter
     index_selector
     article_selector
     link_selector
+    date_selector
   ).freeze
 
   class << self
@@ -17,11 +18,12 @@ class RssConverter
     end
   end
 
-  def initialize(url:, index_selector:, article_selector:, link_selector:)
+  def initialize(url:, index_selector:, article_selector:, link_selector:, date_selector:)
     @url = url
     @index_selector = index_selector
     @article_selector = article_selector
     @link_selector = link_selector
+    @date_selector = date_selector
   end
   attr_accessor(*ATTRIBUTES)
 
@@ -48,6 +50,7 @@ class RssConverter
       {
         link: href,
         title: link.text,
+        updated: (Date.parse(article.css(date_selector).text) rescue Date.today),
       }
     end.compact
   end
@@ -58,18 +61,17 @@ class RssConverter
   end
 
   def rss
-    RSS::Maker.make("2.0") do |maker|
+    RSS::Maker.make("atom") do |maker|
       maker.channel.author = "rss-converter"
       maker.channel.updated = Time.now.to_s
       maker.channel.about = url
-      maker.channel.link = url
       maker.channel.title = title
-      maker.channel.description = title
 
       entries.each do |entry|
         maker.items.new_item do |item|
           item.link = entry[:link]
           item.title = entry[:title]
+          item.updated = entry[:updated].to_s
         end
       end
     end
