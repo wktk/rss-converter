@@ -26,7 +26,7 @@ describe RssConverter::App do
       get '/rss?url=url&index_selector=idx&article_selector=atc&link_selector=lnk'
 
       expect(last_response).to be_ok
-      expect(last_response.get_header('content-type')).to eq 'application/rss+xml'
+      expect(last_response.get_header('content-type')).to eq 'application/atom+xml'
       expect(last_response.body).to eq xml
     end
   end
