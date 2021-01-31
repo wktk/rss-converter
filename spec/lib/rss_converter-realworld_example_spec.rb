@@ -5,7 +5,11 @@ describe 'RssConverter#rss (real world examples)' do
 
   before do
     allow(URI).to receive(:open).with(args[:url]) { html.dup.tap { |f| f.pos = 0 } }
-    allow(Time).to receive(:now) { '2020-05-02T16:16:16+09:00' }
+    Timecop.freeze(Time.local(2020, 5, 2, 16, 16, 16))
+  end
+
+  after do
+    Timecop.return
   end
 
   context 'Shibuya City' do

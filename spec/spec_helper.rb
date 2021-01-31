@@ -4,6 +4,7 @@ end
 
 require 'rack/test'
 require 'rspec'
+require 'timecop'
 
 ENV['RACK_ENV'] = 'test'
 
