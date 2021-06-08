@@ -41,18 +41,21 @@ class RssConverter
   end
 
   def entries
-    articles.map do |article|
+    count = Hash.new(0)
+    articles.reverse.map do |article|
       link = article.css(link_selector).find { |l| l['href'] && !l['href'].empty? }
       next unless link
       href = link['href']
       href = URI.join(url, href).to_s unless href.start_with?('http')
+      date = (Date.parse(article.css(date_selector).text) rescue Date.today)
+      offset = count[date.to_s] += 1
 
       {
         link: href,
         title: link.text,
-        updated: (Date.parse(article.css(date_selector).text) rescue Date.today),
+        updated: date.to_time + offset
       }
-    end.compact
+    end.compact.reverse
   end
 
   def title

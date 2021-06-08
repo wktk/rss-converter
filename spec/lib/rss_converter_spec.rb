@@ -53,11 +53,11 @@ describe RssConverter do
   describe '#entries' do
     it 'parses the document' do
       expect(subject.entries).to eq [
-        { link: 'http://example.com/news/2020-07-01-1.html', title: '猛暑日を記録しました', updated: Date.new(2020, 7, 1) },
-        { link: 'http://example.net/azisai.html', title: 'あじさいが見頃です', updated: Date.new(2020, 6, 21) },
-        { link: 'http://example.com/news/2020-04-02-1.html', title: '桜が満開になりました', updated: Date.new(2020, 4, 2) },
-        { link: 'http://example.com/news/2020-03-09-1.html', title: '春一番を観測しました', updated: Date.new(2020, 3, 9) },
-        { link: 'http://example.com/news/2019-12-13-1.html', title: '初雪を観測しました', updated: Date.new(2019, 12, 13) },
+        { link: 'http://example.com/news/2020-07-01-1.html', title: '猛暑日を記録しました', updated: Time.new(2020, 7, 1, 0, 0, 1) },
+        { link: 'http://example.net/azisai.html', title: 'あじさいが見頃です', updated: Time.new(2020, 6, 21, 0, 0, 1) },
+        { link: 'http://example.com/news/2020-04-02-1.html', title: '桜が満開になりました', updated: Time.new(2020, 4, 2, 0, 0, 1) },
+        { link: 'http://example.com/news/2020-03-09-1.html', title: '春一番を観測しました', updated: Time.new(2020, 3, 9, 0, 0, 1) },
+        { link: 'http://example.com/news/2019-12-13-1.html', title: '初雪を観測しました', updated: Time.new(2019, 12, 13, 0, 0, 1) },
       ]
     end
   end
