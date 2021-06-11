@@ -43,7 +43,11 @@ class RssConverter
   def entries
     count = Hash.new(0)
     articles.reverse.map do |article|
-      link = article.css(link_selector).find { |l| l['href'] && !l['href'].empty? }
+      link = if article['href']
+        article
+      else
+        article.css(link_selector).find { |l| l['href'] && !l['href'].empty? }
+      end
       next unless link
       href = link['href']
       href = URI.join(url, href).to_s unless href.start_with?('http')
