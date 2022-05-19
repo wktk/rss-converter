@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    diff-lcs (1.4.4)
+    diff-lcs (1.5.0)
     mini_portile2 (2.8.0)
     multi_json (1.15.0)
     mustermann (1.1.1)
@@ -14,44 +14,44 @@ GEM
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
-    rack-protection (2.1.0)
+    rack-protection (2.2.0)
       rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rexml (3.2.5)
-    rspec (3.10.0)
-      rspec-core (~> 3.10.0)
-      rspec-expectations (~> 3.10.0)
-      rspec-mocks (~> 3.10.0)
-    rspec-core (3.10.1)
-      rspec-support (~> 3.10.0)
-    rspec-expectations (3.10.1)
+    rspec (3.11.0)
+      rspec-core (~> 3.11.0)
+      rspec-expectations (~> 3.11.0)
+      rspec-mocks (~> 3.11.0)
+    rspec-core (3.11.0)
+      rspec-support (~> 3.11.0)
+    rspec-expectations (3.11.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.10.0)
-    rspec-mocks (3.10.2)
+      rspec-support (~> 3.11.0)
+    rspec-mocks (3.11.1)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.10.0)
-    rspec-support (3.10.2)
+      rspec-support (~> 3.11.0)
+    rspec-support (3.11.0)
     rss (0.2.9)
       rexml
     ruby2_keywords (0.0.5)
-    sinatra (2.1.0)
+    sinatra (2.2.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
-      rack-protection (= 2.1.0)
+      rack-protection (= 2.2.0)
       tilt (~> 2.0)
-    sinatra-contrib (2.1.0)
+    sinatra-contrib (2.2.0)
       multi_json
       mustermann (~> 1.0)
-      rack-protection (= 2.1.0)
-      sinatra (= 2.1.0)
+      rack-protection (= 2.2.0)
+      sinatra (= 2.2.0)
       tilt (~> 2.0)
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
     temple (0.8.2)
     tilt (2.0.10)
-    timecop (0.9.4)
+    timecop (0.9.5)
     wareki (1.1.0)
       ya_kansuji (> 0.0.9, < 2.0.0)
     ya_kansuji (0.2.0)
@@ -72,7 +72,7 @@ DEPENDENCIES
   wareki (~> 1.1)
 
 RUBY VERSION
-   ruby 3.0.1p64
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.19
