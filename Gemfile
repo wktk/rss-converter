@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.0.1'
 
 # HTTP Server
-gem 'sinatra', '~> 2.2'
+gem 'sinatra', '~> 3.0'
 gem 'sinatra-contrib', '~> 2.2'
 gem 'slim', '~> 4.0'
 
