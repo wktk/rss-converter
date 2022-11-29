@@ -17,7 +17,7 @@ group :production do
 end
 
 group :test do
-  gem 'rack-test', '~> 1.1'
+  gem 'rack-test', '~> 2.0'
   gem 'rspec', '~> 3.9'
   gem 'timecop', '~> 0.9.2'
 end
