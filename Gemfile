@@ -13,7 +13,7 @@ gem 'nokogiri', '~> 1.13'
 gem 'wareki', '~> 1.1'
 
 group :production do
-  gem 'puma', '~> 5.0'
+  gem 'puma', '~> 6.0'
 end
 
 group :test do
