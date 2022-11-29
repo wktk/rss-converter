@@ -16,13 +16,13 @@ describe RssConverter::App do
     end
 
     it "passes params to a RssConverter correctly" do
-      expect(RssConverter).to receive(:from).with(
+      expect(RssConverter).to receive(:from).with({
         "url" => "url",
         "index_selector" => "idx",
         "article_selector" => "atc",
         "link_selector" => "lnk",
         "date_selector" => "dt",
-      ).once.and_call_original
+      }).once.and_call_original
 
       get '/rss?url=url&index_selector=idx&article_selector=atc&link_selector=lnk&date_selector=dt'
 
