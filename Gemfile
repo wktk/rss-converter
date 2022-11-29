@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 ruby '3.0.1'
 
 # HTTP Server
-gem 'sinatra', '~> 2.0'
-gem 'sinatra-contrib', '~> 2.0'
+gem 'sinatra', '~> 2.2'
+gem 'sinatra-contrib', '~> 2.2'
 gem 'slim', '~> 4.0'
 
 # HTML Parsing
