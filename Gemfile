@@ -5,7 +5,7 @@ ruby '3.2.2'
 # HTTP Server
 gem 'sinatra', '~> 3.0'
 gem 'sinatra-contrib', '~> 3.0'
-gem 'slim', '~> 4.0'
+gem 'slim', '~> 5.0'
 
 # HTML Parsing
 gem 'rss', '~> 0.2.9'
