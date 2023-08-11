@@ -8,7 +8,7 @@ gem 'sinatra-contrib', '~> 3.0'
 gem 'slim', '~> 5.0'
 
 # HTML Parsing
-gem 'rss', '~> 0.2.9'
+gem 'rss', '~> 0.3.0'
 gem 'nokogiri', '~> 1.13'
 gem 'wareki', '~> 1.1'
 
