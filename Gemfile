@@ -4,7 +4,7 @@ ruby '3.3.0'
 
 # HTTP Server
 gem 'sinatra', '~> 4.0'
-gem 'sinatra-contrib', '~> 3.0'
+gem 'sinatra-contrib', '~> 4.0'
 gem 'slim', '~> 5.0'
 
 # HTML Parsing
