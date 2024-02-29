@@ -72,6 +72,7 @@ class RssConverter
       maker.channel.author = "rss-converter"
       maker.channel.updated = Time.now.to_s
       maker.channel.about = url
+      maker.channel.link = url
       maker.channel.title = title
 
       entries.each do |entry|
