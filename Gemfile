@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.3.6'
+ruby '4.0.0'
 
 # HTTP Server
 gem 'sinatra', '~> 4.0'
