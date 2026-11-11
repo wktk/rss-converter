@@ -10,7 +10,7 @@ gem 'slim', '~> 5.0'
 # HTML Parsing
 gem 'rss', '~> 0.3.0'
 gem 'nokogiri', '~> 1.13'
-gem 'wareki', '~> 1.1'
+gem 'wareki', '~> 2.0'
 
 group :production do
   gem 'puma', '~> 6.0'
