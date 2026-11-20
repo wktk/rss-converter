@@ -19,5 +19,5 @@ end
 group :test do
   gem 'rack-test', '~> 2.0'
   gem 'rspec', '~> 3.9'
-  gem 'timecop', '~> 0.9.2'
+  gem 'webmock', '~> 3.0'
 end

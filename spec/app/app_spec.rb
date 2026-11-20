@@ -9,26 +9,18 @@ describe RssConverter::App do
   end
 
   describe "GET /rss" do
-    let(:xml) { fixture('news.xml').read }
-
     before do
-      allow_any_instance_of(RssConverter).to receive(:rss) { xml }
+      stub_page('http://example.com', fixture('news.html').read)
+      freeze_time(Time.local(2020, 5, 2, 16, 16, 45))
     end
 
-    it "passes params to a RssConverter correctly" do
-      expect(RssConverter).to receive(:from).with({
-        "url" => "url",
-        "index_selector" => "idx",
-        "article_selector" => "atc",
-        "link_selector" => "lnk",
-        "date_selector" => "dt",
-      }).once.and_call_original
-
-      get '/rss?url=url&index_selector=idx&article_selector=atc&link_selector=lnk&date_selector=dt'
+    it "converts the page with the given params" do
+      get '/rss', url: 'http://example.com', index_selector: 'ul', article_selector: 'li',
+                  link_selector: 'a', date_selector: '.date'
 
       expect(last_response).to be_ok
       expect(last_response.get_header('content-type')).to eq 'application/atom+xml'
-      expect(last_response.body).to eq xml
+      expect(last_response.body).to eq fixture('news.xml').read
     end
   end
 end
