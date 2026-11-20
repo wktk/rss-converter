@@ -1,0 +1,41 @@
+name: CI
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Run RSpec
+        run: bundle exec rspec
+        env:
+          # Deprecation warnings are off by default; show them in the log.
+          RUBYOPT: -W:deprecated
+
+  # Boots the server as Procfile does, with only the production gems.
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BUNDLE_WITHOUT: test
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Boot the server and request it
+        run: script/smoke
+        env:
+          # The commit under test, so that the page is the one in this checkout.
+          SMOKE_PAGE_URL: https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/spec/fixtures/news.html

@@ -1,0 +1,56 @@
+#!/usr/bin/env bash
+# Boots the server the way Procfile does and talks to it over HTTP. The specs
+# run inside one process, so they cannot notice an update that breaks puma, a
+# native extension or the production setup.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+PORT="${PORT:-9393}"
+PAGE_URL="${SMOKE_PAGE_URL:-https://raw.githubusercontent.com/wktk/rss-converter/master/spec/fixtures/news.html}"
+# Sinatra only accepts known hosts in development, so send a production one.
+HOST_HEADER='Host: rss-converter.wktk.jp'
+export PORT RACK_ENV=production
+
+log="$(mktemp)"
+bash -c "exec $(sed -n 's/^web: //p' Procfile)" >"$log" 2>&1 &
+server=$!
+
+ok=false
+cleanup() {
+  kill "$server" 2>/dev/null || true
+  wait "$server" 2>/dev/null || true
+  $ok || { echo '--- server log ---'; cat "$log"; }
+}
+trap cleanup EXIT
+
+fail() { echo "smoke test failed: $*" >&2; exit 1; }
+get() { curl --silent --show-error --max-time 30 -H "$HOST_HEADER" "$@"; }
+
+for _ in $(seq 1 60); do
+  get --output /dev/null "http://127.0.0.1:$PORT/" 2>/dev/null && break
+  kill -0 "$server" 2>/dev/null || fail 'server exited during boot'
+  sleep 0.5
+done
+
+status="$(get --output /dev/null --write-out '%{http_code}' "http://127.0.0.1:$PORT/")"
+[ "$status" = 200 ] || fail "GET / returned $status"
+
+feed="$(mktemp)"
+status="$(get --output "$feed" --write-out '%{http_code} %{content_type}' -G "http://127.0.0.1:$PORT/rss" \
+  --data-urlencode "url=$PAGE_URL" --data-urlencode 'index_selector=ul' --data-urlencode 'article_selector=li' \
+  --data-urlencode 'link_selector=a' --data-urlencode 'date_selector=.date')"
+[ "$status" = '200 application/atom+xml' ] || fail "GET /rss returned '$status'"
+bundle exec ruby -rrss -e '
+  entries = RSS::Parser.parse(File.read(ARGV[0]), true).entries
+  abort "expected 5 entries, got #{entries.size}" unless entries.size == 5
+' "$feed" || fail 'the feed does not contain the expected entries'
+
+# The deployed server must not be usable to reach itself.
+status="$(get --output /dev/null --write-out '%{http_code}' -G "http://127.0.0.1:$PORT/rss" \
+  --data-urlencode "url=http://127.0.0.1:$PORT/" --data-urlencode 'index_selector=a' \
+  --data-urlencode 'article_selector=a' --data-urlencode 'link_selector=a' --data-urlencode 'date_selector=a')"
+[ "$status" = 500 ] || fail "a request for 127.0.0.1 returned $status instead of 500"
+grep -q 'SsrfFilter::PrivateIPAddress' "$log" || fail 'the request for 127.0.0.1 was not refused by ssrf_filter'
+
+ok=true
+echo 'smoke test passed'
