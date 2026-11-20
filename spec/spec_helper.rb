@@ -38,4 +38,12 @@ end
 RSpec.configure do |config|
   config.include RSpecMixin
   config.fail_if_no_examples = true
+
+  # Host names resolve to a fixed public address so that specs never depend on
+  # DNS. IP literals keep the real resolver.
+  config.before do
+    allow(Resolv).to receive(:getaddresses).and_wrap_original do |original, host|
+      host.match?(/\A[\d.]+\z|:/) ? original.call(host) : ['93.184.216.34']
+    end
+  end
 end

@@ -1,6 +1,6 @@
 require 'nokogiri'
-require 'open-uri'
 require 'rss'
+require 'ssrf_filter'
 require 'wareki'
 
 class RssConverter
@@ -28,8 +28,11 @@ class RssConverter
   attr_accessor(*ATTRIBUTES)
 
   def html_document
-    html = URI.open(url).read
-    Nokogiri::HTML.parse(html)
+    @html_document ||= begin
+      response = SsrfFilter.get(url, http_options: { open_timeout: 5, read_timeout: 10 })
+      response.value
+      Nokogiri::HTML.parse(response.body, nil, response.type_params['charset'])
+    end
   end
 
   def index
