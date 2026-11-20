@@ -11,17 +11,6 @@ jobs:
         with:
           bundler-cache: true
 
-      - uses: actions/cache@v6
-        with:
-          path: .bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: ${{ runner.os }}-gems-
-
-      - name: Set up dependences
-        run: |
-          gem install bundler
-          bundle check || bundle install --jobs 4 --retry 3 --path .bundle
-
       - name: Run RSpec
         run: bundle exec rspec
         env:
