@@ -1,6 +1,6 @@
 require 'nokogiri'
-require 'open-uri'
 require 'rss'
+require 'ssrf_filter'
 require 'wareki'
 
 class RssConverter
@@ -28,8 +28,11 @@ class RssConverter
   attr_accessor(*ATTRIBUTES)
 
   def html_document
-    html = URI.open(url).read
-    Nokogiri::HTML.parse(html)
+    @html_document ||= begin
+      response = SsrfFilter.get(url, http_options: { open_timeout: 5, read_timeout: 10 })
+      response.value
+      Nokogiri::HTML.parse(decode(response))
+    end
   end
 
   def index
@@ -82,5 +85,25 @@ class RssConverter
         end
       end
     end
+  end
+
+  private
+
+  # libxml2 reads pages that declare nothing as ISO-8859-1, and its Shift_JIS
+  # lacks the vendor characters (①, ㈱) that Japanese pages use.
+  def decode(response)
+    body = response.body.b
+    declared = [response.type_params['charset'], body[/<meta\s[^>]*?charset\s*=\s*["']?([\w-]+)/i, 1]]
+    encoding = declared.compact.filter_map { |name| find_encoding(name) }.first
+    # EUC-JP before Shift_JIS: Shift_JIS text with kana is almost never valid
+    # EUC-JP, while EUC-JP text often passes as Shift_JIS.
+    encoding ||= [Encoding::UTF_8, Encoding::EUC_JP, Encoding::Windows_31J].find { |e| body.dup.force_encoding(e).valid_encoding? }
+    body.force_encoding(encoding || Encoding::UTF_8).encode(Encoding::UTF_8, invalid: :replace, undef: :replace)
+  end
+
+  def find_encoding(name)
+    Encoding.find(name.match?(/\A(shift[_-]jis|x-sjis)\z/i) ? 'Windows-31J' : name)
+  rescue ArgumentError
+    nil
   end
 end

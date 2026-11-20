@@ -4,12 +4,8 @@ describe 'RssConverter#rss (real world examples)' do
   subject { RssConverter.new(**args).rss.to_s }
 
   before do
-    allow(URI).to receive(:open).with(args[:url]) { html.dup.tap { |f| f.pos = 0 } }
-    Timecop.freeze(Time.local(2020, 5, 2, 16, 16, 16))
-  end
-
-  after do
-    Timecop.return
+    stub_page(args[:url], html.read)
+    freeze_time(Time.local(2020, 5, 2, 16, 16, 16))
   end
 
   context 'Shibuya City' do

@@ -3,9 +3,7 @@ require './spec/spec_helper'
 describe RssConverter do
   subject { RssConverter.new(**valid_arguments) }
 
-  before do
-    allow(URI).to receive(:open).with('http://example.com') { fixture('news.html') }
-  end
+  before { stub_page('http://example.com', fixture('news.html').read) }
 
   let(:valid_arguments) { {
     url: 'http://example.com',
@@ -63,7 +61,7 @@ describe RssConverter do
   end
 
   describe '#rss' do
-    before { allow(Time).to receive(:now) { '2020-05-02T16:16:45+09:00' } }
+    before { freeze_time(Time.local(2020, 5, 2, 16, 16, 45)) }
 
     it 'generates RSS' do
       expect(subject.rss).to be_a RSS::Atom::Feed
