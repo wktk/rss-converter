@@ -18,6 +18,37 @@ describe RssConverter::App do
     end
   end
 
+  describe "footer" do
+    def footer_text
+      get '/'
+      Nokogiri::HTML.parse(last_response.body).at_css('footer').text.gsub(/[[:space:]]+/, ' ').strip
+    end
+
+    it "shows no commit when the platform provides none" do
+      stub_const('ENV', ENV.to_h.reject { |k, _| RssConverter::App::COMMIT_ENV_KEYS.include?(k) })
+
+      expect(footer_text).to eq 'wktk/rss-converter'
+    end
+
+    {
+      'RENDER_GIT_COMMIT' => 'Render',
+      'SOURCE_VERSION' => 'a Heroku build',
+      'GIT_COMMIT' => 'a generic setup',
+    }.each do |key, platform|
+      it "shows the abbreviated commit set by #{platform} (#{key})" do
+        stub_const('ENV', ENV.to_h.reject { |k, _| RssConverter::App::COMMIT_ENV_KEYS.include?(k) }.merge(key => '0123456789abcdef'))
+
+        expect(footer_text).to eq 'wktk/rss-converter @ 0123456'
+      end
+    end
+
+    it "ignores empty values" do
+      stub_const('ENV', ENV.to_h.reject { |k, _| RssConverter::App::COMMIT_ENV_KEYS.include?(k) }.merge('RENDER_GIT_COMMIT' => '', 'GIT_COMMIT' => 'fedcba9876'))
+
+      expect(footer_text).to eq 'wktk/rss-converter @ fedcba9'
+    end
+  end
+
   describe "GET /rss" do
     before do
       stub_page('http://example.com', fixture('news.html').read)
