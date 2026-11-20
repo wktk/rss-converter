@@ -81,7 +81,7 @@ DEPENDENCIES
   wareki (~> 1.1)
 
 RUBY VERSION
-   ruby 3.3.6p108
+  ruby 4.0.10
 
 BUNDLED WITH
-   2.2.19
+  4.0.20
