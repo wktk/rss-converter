@@ -10,5 +10,5 @@ html
     footer style="margin: 50px auto"
       hr
       a href="https://github.com/wktk/rss-converter" wktk/rss-converter
-      - if ENV['HEROKU_SLUG_COMMIT']
-        span &nbsp;@&nbsp;#{ENV['HEROKU_SLUG_COMMIT'].slice(0, 7)}
+      - if commit_sha
+        span &nbsp;@&nbsp;#{commit_sha}
