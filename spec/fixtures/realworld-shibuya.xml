@@ -5,6 +5,7 @@
     <name>rss-converter</name>
   </author>
   <id>https://www.city.shibuya.tokyo.jp/news/index.html</id>
+  <link href="https://www.city.shibuya.tokyo.jp/news/index.html"/>
   <title>新着情報 | 渋谷区公式サイト</title>
   <updated>2020-05-02T16:16:16+09:00</updated>
   <entry>
