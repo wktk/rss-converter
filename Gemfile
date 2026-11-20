@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.3.6'
+ruby '4.0.10'
 
 # HTTP Server
 gem 'sinatra', '~> 4.0'
@@ -10,10 +10,10 @@ gem 'slim', '~> 5.0'
 # HTML Parsing
 gem 'rss', '~> 0.3.0'
 gem 'nokogiri', '~> 1.13'
-gem 'wareki', '~> 1.1'
+gem 'wareki', '~> 2.1'
 
 group :production do
-  gem 'puma', '~> 6.0'
+  gem 'puma', '~> 8.0'
 end
 
 group :test do
