@@ -3,7 +3,6 @@
   "assignees": ["wktk"],
   "reviewers": ["wktk"],
   "timezone": "Asia/Tokyo",
-  "minimumReleaseAge": "3 days",
   "automergeSchedule": ["* 9-17 * * 1-5"],
   "lockFileMaintenance": { "enabled": true, "automerge": true },
   "packageRules": [
